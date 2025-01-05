@@ -11,7 +11,6 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      overflow-x: hidden;
     }
 
     .hero-section {
@@ -20,13 +19,13 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(120deg, #2a5298, #6dd5ed, #8e44ad, #e96443);
-      background-size: 300% 300%;
-      animation: gradientBG 10s infinite;
+      background: linear-gradient(120deg, #0d3b66, #faa916, #ff595e, #1982c4, #8ac926, #6a4c93);
+      background-size: 400% 400%;
+      animation: gradientBG 8s infinite;
       color: white;
       text-align: center;
-      position: relative;
       overflow: hidden;
+      position: relative;
     }
 
     @keyframes gradientBG {
@@ -38,62 +37,32 @@
     /* Floating Bubbles */
     .bubble {
       position: absolute;
-      bottom: -100px;
-      background-color: rgba(255, 255, 255, 0.2);
       border-radius: 50%;
-      animation: float 10s infinite ease-in-out;
       opacity: 0.8;
+      animation: floatUp 12s linear infinite;
+      background-color: rgba(255, 255, 255, 0.2);
     }
 
-    .bubble:nth-child(1) {
-      width: 60px;
-      height: 60px;
-      left: 20%;
-      animation-duration: 8s;
-    }
-
-    .bubble:nth-child(2) {
-      width: 80px;
-      height: 80px;
-      left: 40%;
-      animation-duration: 10s;
-    }
-
-    .bubble:nth-child(3) {
-      width: 100px;
-      height: 100px;
-      left: 60%;
-      animation-duration: 12s;
-    }
-
-    .bubble:nth-child(4) {
-      width: 50px;
-      height: 50px;
-      left: 80%;
-      animation-duration: 6s;
-    }
-
-    .bubble:nth-child(5) {
-      width: 70px;
-      height: 70px;
-      left: 10%;
-      animation-duration: 14s;
-    }
-
-    @keyframes float {
-      0% {
-        transform: translateY(0) scale(1);
-        opacity: 0.6;
-      }
-      50% {
-        transform: translateY(-500px) scale(1.2);
-        opacity: 0.4;
-      }
-      100% {
-        transform: translateY(-1000px) scale(1);
+    @keyframes floatUp {
+      from {
+        transform: translateY(100vh);
         opacity: 0;
       }
+      to {
+        transform: translateY(-10%);
+        opacity: 1;
+      }
     }
+
+    /* Generate Random Bubbles */
+    .bubble:nth-child(1) { width: 15px; height: 15px; left: 10%; animation-duration: 14s; }
+    .bubble:nth-child(2) { width: 10px; height: 10px; left: 20%; animation-duration: 10s; }
+    .bubble:nth-child(3) { width: 8px; height: 8px; left: 30%; animation-duration: 12s; }
+    .bubble:nth-child(4) { width: 12px; height: 12px; left: 40%; animation-duration: 15s; }
+    .bubble:nth-child(5) { width: 9px; height: 9px; left: 50%; animation-duration: 11s; }
+    .bubble:nth-child(6) { width: 7px; height: 7px; left: 60%; animation-duration: 9s; }
+    .bubble:nth-child(7) { width: 6px; height: 6px; left: 70%; animation-duration: 13s; }
+    .bubble:nth-child(8) { width: 5px; height: 5px; left: 80%; animation-duration: 8s; }
 
     /* Navigation Bar */
     .navbar {
@@ -111,66 +80,78 @@
     }
 
     .navbar a:hover {
-      color: #6dd5ed;
+      color: #1ad7c0;
     }
 
     .navbar-brand {
       font-size: 1.2rem;
       font-weight: bold;
-      color: #e96443;
+      color: #ff9b11;
     }
 
     /* Hero Content */
     .hero-title {
-      font-size: 3.5rem;
-      font-weight: bold;
-      margin: 0;
+      font-size: 5rem;
+      font-weight: normal;
+      margin: 0 0 20px;
     }
 
     .hero-tagline {
-      font-size: 1.5rem;
-      margin-top: 10px;
+      font-size: 1.8rem;
+      margin: 20px 0 40px;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      animation: typewriter 3s steps(30) forwards;
+    }
+
+    @keyframes typewriter {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
     }
 
     /* Social Media Icons */
     .social-icons {
-      margin-top: 20px;
+      margin-top: 30px;
       display: flex;
       justify-content: center;
-      gap: 15px;
+      gap: 20px;
     }
 
     .social-icons a {
       display: inline-block;
-      width: 40px;
-      height: 40px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       background-color: white;
       display: flex;
       justify-content: center;
       align-items: center;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, background-color 0.3s;
+      transition: transform 0.3s;
     }
 
     .social-icons a:hover {
       transform: scale(1.2);
-      background-color: #6dd5ed;
     }
 
     .social-icons img {
-      width: 20px;
-      height: 20px;
+      width: 30px;
+      height: 30px;
     }
 
     /* About Me Button */
     .about-btn {
-      margin-top: 20px;
-      padding: 10px 20px;
+      margin-top: 40px;
+      padding: 12px 25px;
       background: transparent;
       border: 2px solid white;
       border-radius: 50px;
-      font-size: 1rem;
+      font-size: 1.2rem;
       color: white;
       text-transform: uppercase;
       text-decoration: none;
@@ -179,8 +160,8 @@
 
     .about-btn:hover {
       background: white;
-      color: #6dd5ed;
-      border: 2px solid #6dd5ed;
+      color: #1ad7c0;
+      border: 2px solid #1ad7c0;
     }
   </style>
 </head>
@@ -198,16 +179,19 @@
 
   <!-- Hero Section -->
   <section class="hero-section">
-    <h1 class="hero-title">Mukhesh Ravi</h1>
-    <p class="hero-tagline">Passionate about changing the world with data.</p>
-    
-    <!-- Bubbles -->
+    <!-- Floating Bubbles -->
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
     <div class="bubble"></div>
     <div class="bubble"></div>
     <div class="bubble"></div>
     <div class="bubble"></div>
     <div class="bubble"></div>
 
+    <h1 class="hero-title">Mukhesh Ravi</h1>
+    <p class="hero-tagline">Passionate about changing the world with data.</p>
+    
     <!-- Social Media Icons -->
     <div class="social-icons">
       <a href="https://github.com/" target="_blank"><img src="https://img.icons8.com/material-outlined/50/000000/github.png" alt="GitHub"></a>
