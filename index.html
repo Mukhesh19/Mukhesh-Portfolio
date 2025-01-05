@@ -11,6 +11,7 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
+      overflow-x: hidden;
     }
 
     .hero-section {
@@ -19,18 +20,79 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(45deg, #4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1);
+      background: linear-gradient(120deg, #2a5298, #6dd5ed, #8e44ad, #e96443);
       background-size: 300% 300%;
       animation: gradientBG 10s infinite;
       color: white;
       text-align: center;
       position: relative;
+      overflow: hidden;
     }
 
     @keyframes gradientBG {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
+    }
+
+    /* Floating Bubbles */
+    .bubble {
+      position: absolute;
+      bottom: -100px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      animation: float 10s infinite ease-in-out;
+      opacity: 0.8;
+    }
+
+    .bubble:nth-child(1) {
+      width: 60px;
+      height: 60px;
+      left: 20%;
+      animation-duration: 8s;
+    }
+
+    .bubble:nth-child(2) {
+      width: 80px;
+      height: 80px;
+      left: 40%;
+      animation-duration: 10s;
+    }
+
+    .bubble:nth-child(3) {
+      width: 100px;
+      height: 100px;
+      left: 60%;
+      animation-duration: 12s;
+    }
+
+    .bubble:nth-child(4) {
+      width: 50px;
+      height: 50px;
+      left: 80%;
+      animation-duration: 6s;
+    }
+
+    .bubble:nth-child(5) {
+      width: 70px;
+      height: 70px;
+      left: 10%;
+      animation-duration: 14s;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+      }
+      50% {
+        transform: translateY(-500px) scale(1.2);
+        opacity: 0.4;
+      }
+      100% {
+        transform: translateY(-1000px) scale(1);
+        opacity: 0;
+      }
     }
 
     /* Navigation Bar */
@@ -49,13 +111,13 @@
     }
 
     .navbar a:hover {
-      color: #1ad7c0;
+      color: #6dd5ed;
     }
 
     .navbar-brand {
       font-size: 1.2rem;
       font-weight: bold;
-      color: #ff9b11;
+      color: #e96443;
     }
 
     /* Hero Content */
@@ -68,20 +130,6 @@
     .hero-tagline {
       font-size: 1.5rem;
       margin-top: 10px;
-      display: inline-block;
-      border-right: 2px solid white;
-      white-space: nowrap;
-      overflow: hidden;
-      animation: typewriter 3s steps(30) 1s infinite alternate;
-    }
-
-    @keyframes typewriter {
-      from {
-        width: 0;
-      }
-      to {
-        width: 100%;
-      }
     }
 
     /* Social Media Icons */
@@ -102,11 +150,12 @@
       justify-content: center;
       align-items: center;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
+      transition: transform 0.3s, background-color 0.3s;
     }
 
     .social-icons a:hover {
       transform: scale(1.2);
+      background-color: #6dd5ed;
     }
 
     .social-icons img {
@@ -130,8 +179,8 @@
 
     .about-btn:hover {
       background: white;
-      color: #1ad7c0;
-      border: 2px solid #1ad7c0;
+      color: #6dd5ed;
+      border: 2px solid #6dd5ed;
     }
   </style>
 </head>
@@ -150,8 +199,15 @@
   <!-- Hero Section -->
   <section class="hero-section">
     <h1 class="hero-title">Mukhesh Ravi</h1>
-    <p class="hero-tagline">Passionate about changing the world with data. </p>
+    <p class="hero-tagline">Passionate about changing the world with data.</p>
     
+    <!-- Bubbles -->
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+
     <!-- Social Media Icons -->
     <div class="social-icons">
       <a href="https://github.com/" target="_blank"><img src="https://img.icons8.com/material-outlined/50/000000/github.png" alt="GitHub"></a>
