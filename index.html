@@ -68,27 +68,77 @@
     .hero-tagline {
       font-size: 1.5rem;
       margin-top: 10px;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 2s ease-out forwards;
+      display: inline-block;
+      border-right: 2px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typewriter 3s steps(30) 1s infinite alternate;
     }
 
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
+    @keyframes typewriter {
+      from {
+        width: 0;
       }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
+      to {
+        width: 100%;
       }
+    }
+
+    /* Social Media Icons */
+    .social-icons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .social-icons img {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* About Me Button */
+    .about-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: transparent;
+      border: 2px solid white;
+      border-radius: 50px;
+      font-size: 1rem;
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s, border 0.3s;
+    }
+
+    .about-btn:hover {
+      background: white;
+      color: #1ad7c0;
+      border: 2px solid #1ad7c0;
     }
   </style>
 </head>
 <body>
   <!-- Navigation Bar -->
   <nav class="navbar fixed-top">
-    <a class="navbar-brand" href="#">Mukhesh</a>
+    <a class="navbar-brand" href="#">Hashir</a>
     <div>
       <a href="#projects">Projects</a>
       <a href="#resume">Resume</a>
@@ -99,8 +149,19 @@
 
   <!-- Hero Section -->
   <section class="hero-section">
-    <h1 class="hero-title">Mukhesh Ravi</h1>
-    <p class="hero-tagline">Passionate about changing the world with data. </p>
+    <h1 class="hero-title">Hashir Shoaib</h1>
+    <p class="hero-tagline">Passionate about changing the world with technology.</p>
+    
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+      <a href="https://github.com/" target="_blank"><img src="https://img.icons8.com/material-outlined/50/000000/github.png" alt="GitHub"></a>
+      <a href="https://linkedin.com/" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://instagram.com/" target="_blank"><img src="https://img.icons8.com/material-rounded/50/000000/instagram-new.png" alt="Instagram"></a>
+      <a href="https://tableau.com/" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/tableau-software.png" alt="Tableau"></a>
+    </div>
+
+    <!-- About Me Button -->
+    <a href="#about" class="about-btn">About Me</a>
   </section>
 
   <!-- Include Bootstrap JavaScript -->
@@ -109,6 +170,3 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-
-
