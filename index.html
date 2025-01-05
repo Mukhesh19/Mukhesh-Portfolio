@@ -3,111 +3,210 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Homepage</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <title>Data Analyst Portfolio</title>
+  <!-- Include Bootstrap -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* General Styles */
+    /* Gradient Background */
     body {
       margin: 0;
-      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .hero-section {
       height: 100vh;
-      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(120deg, #0d3b66, #faa916, #ff595e, #1982c4, #8ac926, #6a4c93);
+      background-size: 400% 400%;
+      animation: gradientBG 8s infinite;
+      color: white;
+      text-align: center;
       overflow: hidden;
-      background: linear-gradient(135deg, purple, teal, pink);
+      position: relative;
     }
 
-    /* Name and Message Styling */
-    h1 {
-      font-family: 'Century Gothic', sans-serif;
-      font-size: 4rem;
-      text-align: center;
-      margin-top: 20px;
-      color: white;
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
-    .message {
-      font-family: 'Century Gothic', sans-serif;
-      font-size: 2rem;
-      text-align: center;
-      color: white;
-      margin: 10px 0;
-      animation: typewrite 4s steps(40) infinite alternate;
-    }
-
-    @keyframes typewrite {
-      from {
-        transform: scale(0.95);
-      }
-      to {
-        transform: scale(1);
-      }
-    }
-
-    /* Bubble Styling */
+    /* Floating Bubbles */
     .bubble {
       position: absolute;
-      background-color: rgba(255, 255, 255, 0.2);
       border-radius: 50%;
-      animation: floatUp 8s infinite ease-in-out;
+      opacity: 0.8;
+      animation: floatUp 12s linear infinite;
+      background-color: rgba(255, 255, 255, 0.2);
     }
 
     @keyframes floatUp {
-      0% {
+      from {
         transform: translateY(100vh);
+        opacity: 0;
       }
-      100% {
+      to {
         transform: translateY(-10%);
+        opacity: 1;
       }
     }
 
-    /* Generate More Bubbles */
-    .bubble:nth-child(odd) {
-      animation-duration: 6s;
+    /* Generate Random Bubbles */
+    .bubble:nth-child(1) { width: 15px; height: 15px; left: 10%; animation-duration: 14s; }
+    .bubble:nth-child(2) { width: 10px; height: 10px; left: 20%; animation-duration: 10s; }
+    .bubble:nth-child(3) { width: 8px; height: 8px; left: 30%; animation-duration: 12s; }
+    .bubble:nth-child(4) { width: 12px; height: 12px; left: 40%; animation-duration: 15s; }
+    .bubble:nth-child(5) { width: 9px; height: 9px; left: 50%; animation-duration: 11s; }
+    .bubble:nth-child(6) { width: 7px; height: 7px; left: 60%; animation-duration: 9s; }
+    .bubble:nth-child(7) { width: 6px; height: 6px; left: 70%; animation-duration: 13s; }
+    .bubble:nth-child(8) { width: 5px; height: 5px; left: 80%; animation-duration: 8s; }
+
+    /* Navigation Bar */
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 0.7rem 1rem;
     }
 
-    .bubble:nth-child(even) {
-      animation-duration: 10s;
+    .navbar a {
+      color: white;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      margin-right: 20px;
+      text-decoration: none;
+      transition: color 0.3s;
     }
 
-    .bubble:nth-child(3n) {
-      background-color: rgba(255, 255, 255, 0.3);
+    .navbar a:hover {
+      color: #1ad7c0;
+    }
+
+    .navbar-brand {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ff9b11;
+    }
+
+    /* Hero Content */
+    .hero-title {
+      font-size: 5rem;
+      font-weight: normal;
+      margin: 0 0 20px;
+    }
+
+    .hero-tagline {
+      font-size: 1.8rem;
+      margin: 20px 0 40px;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      animation: typewriter 3s steps(30) forwards;
+    }
+
+    @keyframes typewriter {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    /* Social Media Icons */
+    .social-icons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+    }
+
+    /* About Me Button */
+    .about-btn {
+      margin-top: 40px;
+      padding: 12px 25px;
+      background: transparent;
+      border: 2px solid white;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s, border 0.3s;
+    }
+
+    .about-btn:hover {
+      background: white;
+      color: #1ad7c0;
+      border: 2px solid #1ad7c0;
     }
   </style>
 </head>
 <body>
-  <!-- Bubbles -->
-  <div id="bubble-container"></div>
+  <!-- Navigation Bar -->
+  <nav class="navbar fixed-top">
+    <a class="navbar-brand" href="#">Mukhesh Ravi</a>
+    <div>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+    </div>
+  </nav>
 
-  <!-- Content -->
-  <h1>Your Name</h1>
-  <p class="message">Passionate about data and design.</p>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <!-- Floating Bubbles -->
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
 
-  <script>
-    // Bubble generation script
-    const bubbleContainer = document.getElementById("bubble-container");
+    <h1 class="hero-title">Mukhesh Ravi</h1>
+    <p class="hero-tagline">Passionate about changing the world with data.</p>
+    
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+      <a href="https://github.com/" target="_blank"><img src="https://img.icons8.com/material-outlined/50/000000/github.png" alt="GitHub"></a>
+      <a href="https://linkedin.com/" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://instagram.com/" target="_blank"><img src="https://img.icons8.com/material-rounded/50/000000/instagram-new.png" alt="Instagram"></a>
+      <a href="https://tableau.com/" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/tableau-software.png" alt="Tableau"></a>
+    </div>
 
-    function createBubble() {
-      const bubble = document.createElement("div");
-      const size = Math.random() * 10 + 5; // Smaller bubble size
-      const xPos = Math.random() * window.innerWidth;
-      bubble.classList.add("bubble");
-      bubble.style.width = `${size}px`;
-      bubble.style.height = `${size}px`;
-      bubble.style.left = `${xPos}px`;
-      bubble.style.bottom = `0px`;
-      bubbleContainer.appendChild(bubble);
+    <!-- About Me Button -->
+    <a href="#about" class="about-btn">About Me</a>
+  </section>
 
-      setTimeout(() => {
-        bubbleContainer.removeChild(bubble);
-      }, 8000); // Match floatUp animation duration
-    }
-
-    // Generate multiple bubbles at once
-    setInterval(() => {
-      for (let i = 0; i < 5; i++) { // Increase number of bubbles
-        createBubble();
-      }
-    }, 500);
-  </script>
+  <!-- Include Bootstrap JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
