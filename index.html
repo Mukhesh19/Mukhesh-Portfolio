@@ -144,24 +144,25 @@
       height: 30px;
     }
 
-    /* About Me Button */
-    .about-btn {
-      margin-top: 40px;
-      padding: 12px 25px;
-      background: transparent;
-      border: 2px solid white;
-      border-radius: 50px;
-      font-size: 1.2rem;
-      color: white;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: background 0.3s, color 0.3s, border 0.3s;
+    /* About Section Styling */
+    .about-section {
+      padding: 80px 20px;
+      background-color: #f9f9f9;
+      color: #333;
+      text-align: center;
     }
 
-    .about-btn:hover {
-      background: white;
-      color: #1ad7c0;
-      border: 2px solid #1ad7c0;
+    .about-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .about-text {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0 auto;
     }
   </style>
 </head>
@@ -204,10 +205,19 @@
     <a href="#about" class="about-btn">About Me</a>
   </section>
 
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <h2 class="about-title">About Me</h2>
+    <p class="about-text">
+      Hello! I'm Mukhesh Ravi, a data analyst with a passion for uncovering insights from data. I specialize in using advanced analytics techniques to solve real-world problems. My journey in data analytics is fueled by curiosity and a desire to make a difference in the world through actionable insights.
+    </p>
+  </section>
+
   <!-- Include Bootstrap JavaScript -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
 
