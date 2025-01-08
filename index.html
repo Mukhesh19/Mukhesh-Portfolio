@@ -382,9 +382,85 @@
   </div>
 </section>
 
-  <!-- Include Bootstrap JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Skills Section -->
+<section id="skills" class="skills-section py-5" style="background-color: #e6e6e6;">
+  <div class="container">
+    <h2 class="text-center mb-4">Skills</h2>
+    <ul class="nav nav-tabs" id="skillsTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="technical-skills-tab" data-toggle="tab" href="#technical-skills" role="tab" aria-controls="technical-skills" aria-selected="true">Technical Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="soft-skills-tab" data-toggle="tab" href="#soft-skills" role="tab" aria-controls="soft-skills" aria-selected="false">Soft Skills</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="skillsTabContent">
+      <div class="tab-pane fade show active" id="technical-skills" role="tabpanel" aria-labelledby="technical-skills-tab">
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <div class="skills-box">
+              <img src="python-logo.png" alt="Python" class="img-fluid">
+              <p>Python – Proficient</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="skills-box">
+              <img src="sql-logo.png" alt="SQL" class="img-fluid">
+              <p>SQL – Proficient</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="skills-box">
+              <img src="r-logo.png" alt="R" class="img-fluid">
+              <p>R – Proficient</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="skills-box">
+              <img src="cpp-logo.png" alt="C++" class="img-fluid">
+              <p>C++ – Basics</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="skills-box">
+              <img src="java-logo.png" alt="Java" class="img-fluid">
+              <p>Java – Basics</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="soft-skills" role="tabpanel" aria-labelledby="soft-skills-tab">
+        <div class="mt-4">
+          <p>Communication</p>
+          <p>Teamwork</p>
+          <p>Problem-Solving</p>
+          <p>Time Management</p>
+          <p>Adaptability</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.skills-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+.skills-box img {
+  height: 40px;
+  margin-right: 10px;
+}
+</style>
+
+<!-- Include Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
