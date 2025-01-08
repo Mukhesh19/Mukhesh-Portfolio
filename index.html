@@ -236,7 +236,7 @@
         <!-- First Set of 3 Cards -->
         <div class="carousel-item active">
           <div class="row">
-           <!-- Project Card 1 -->
+            <!-- Project Card 1 -->
 <div class="col-md-4">
   <div class="card project-card">
     <img src="image1.png" class="card-img-top" alt="Project 1 Image">
@@ -244,7 +244,7 @@
       <h5 class="card-title">Project 1</h5>
       <p class="card-text">A brief description of Project 1. Built using Bootstrap and JavaScript.</p>
       <div class="d-flex justify-content-between">
-        <button class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#overviewModal1">Overview</button>
+        <button class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#cloneProjectModal1">Clone Project</button>
         <a href="https://github.com/yourrepo/project1" class="btn btn-outline-secondary btn-sm">Repo</a>
       </div>
       <hr>
@@ -254,257 +254,127 @@
   </div>
 </div>
 
-<!-- Overview Modal -->
-<div class="modal fade" id="overviewModal1" tabindex="-1" role="dialog" aria-labelledby="overviewModalLabel1" aria-hidden="true">
+<!-- Clone Project Modal -->
+<div class="modal fade" id="cloneProjectModal1" tabindex="-1" role="dialog" aria-labelledby="cloneProjectModalLabel1" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="overviewModalLabel1">Project Overview</h5>
+        <h5 class="modal-title" id="cloneProjectModalLabel1">Clone Project</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <h6>Research Question</h6>
-        <p>What is the main research question?</p>
-        <h6>Findings</h6>
-        <p>What are the key findings?</p>
-        <h6>Results</h6>
-        <p>What are the results of the analysis?</p>
-        <!-- Add more sections as needed -->
+        <form>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
       </div>
     </div>
   </div>
 </div>
-           <!-- Project Card 2 -->
-<div class="col-md-4">
-  <div class="card project-card">
-    <img src="image1.png" class="card-img-top" alt="Project 2 Image">
-    <div class="card-body">
-      <h5 class="card-title">Project 2</h5>
-      <p class="card-text">A brief description of Project 2. Built using Bootstrap and JavaScript.</p>
-      <div class="d-flex justify-content-between">
-        <button class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#overviewModal1">Overview</button>
-        <a href="https://github.com/yourrepo/project1" class="btn btn-outline-secondary btn-sm">Repo</a>
-      </div>
-      <hr>
-      <p class="mb-1"><strong>Languages:</strong> JavaScript: 50%, SCSS: 30%, HTML: 20%</p>
-      <p class="mb-1"><strong>Updated:</strong> December 24, 2024</p>
-    </div>
-  </div>
-</div>
-
-<!-- Overview Modal -->
-<div class="modal fade" id="overviewModal1" tabindex="-1" role="dialog" aria-labelledby="overviewModalLabel1" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="overviewModalLabel1">Project Overview</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Research Question</h6>
-        <p>What is the main research question?</p>
-        <h6>Findings</h6>
-        <p>What are the key findings?</p>
-        <h6>Results</h6>
-        <p>What are the results of the analysis?</p>
-        <!-- Add more sections as needed -->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+            <!-- Project Card 2 -->
+            <div class="col-md-4">
+              <div class="card">
+                <img src="image1.png" class="card-img-top" alt="Project 1 Image">
+                <div class="card-body">
+                  <h5 class="card-title">Project 2</h5>
+                  <p class="card-text">A brief description of Project 2. Built using React and SCSS.</p>
+                  <div class="d-flex justify-content-between">
+                    <a href="#" class="btn btn-outline-primary btn-sm">Clone Project</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm">Repo</a>
+                  </div>
+                  <hr>
+                  <p class="mb-1"><strong>Languages:</strong> JavaScript: 60%, SCSS: 25%, HTML: 15%</p>
+                  <p class="mb-1"><strong>Updated:</strong> November 20, 2024</p>
+                </div>
+              </div>
+            </div>
             <!-- Project Card 3 -->
-<div class="col-md-4">
-  <div class="card project-card">
-    <img src="image1.png" class="card-img-top" alt="Project 3 Image">
-    <div class="card-body">
-      <h5 class="card-title">Project 3</h5>
-      <p class="card-text">A brief description of Project 3. Built using Bootstrap and JavaScript.</p>
-      <div class="d-flex justify-content-between">
-        <button class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#overviewModal1">Overview</button>
-        <a href="https://github.com/yourrepo/project1" class="btn btn-outline-secondary btn-sm">Repo</a>
-      </div>
-      <hr>
-      <p class="mb-1"><strong>Languages:</strong> JavaScript: 50%, SCSS: 30%, HTML: 20%</p>
-      <p class="mb-1"><strong>Updated:</strong> December 24, 2024</p>
-    </div>
-  </div>
-</div>
-
-<!-- Overview Modal -->
-<div class="modal fade" id="overviewModal1" tabindex="-1" role="dialog" aria-labelledby="overviewModalLabel1" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="overviewModalLabel1">Project Overview</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Research Question</h6>
-        <p>What is the main research question?</p>
-        <h6>Findings</h6>
-        <p>What are the key findings?</p>
-        <h6>Results</h6>
-        <p>What are the results of the analysis?</p>
-        <!-- Add more sections as needed -->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-            
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Project 3</h5>
+                  <p class="card-text">A brief description of Project 3. Built using Python and Django.</p>
+                  <div class="d-flex justify-content-between">
+                    <a href="#" class="btn btn-outline-primary btn-sm">Clone Project</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm">Repo</a>
+                  </div>
+                  <hr>
+                  <p class="mb-1"><strong>Languages:</strong> Python: 80%, HTML: 20%</p>
+                  <p class="mb-1"><strong>Updated:</strong> October 15, 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- Second Set of 3 Cards -->
         <div class="carousel-item">
           <div class="row">
             <!-- Project Card 4 -->
-<div class="col-md-4">
-  <div class="card project-card">
-    <img src="image1.png" class="card-img-top" alt="Project 4 Image">
-    <div class="card-body">
-      <h5 class="card-title">Project 4</h5>
-      <p class="card-text">A brief description of Project 4. Built using Bootstrap and JavaScript.</p>
-      <div class="d-flex justify-content-between">
-        <button class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#overviewModal1">Overview</button>
-        <a href="https://github.com/yourrepo/project1" class="btn btn-outline-secondary btn-sm">Repo</a>
-      </div>
-      <hr>
-      <p class="mb-1"><strong>Languages:</strong> JavaScript: 50%, SCSS: 30%, HTML: 20%</p>
-      <p class="mb-1"><strong>Updated:</strong> December 24, 2024</p>
-    </div>
-  </div>
-</div>
-
-<!-- Overview Modal -->
-<div class="modal fade" id="overviewModal1" tabindex="-1" role="dialog" aria-labelledby="overviewModalLabel1" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="overviewModalLabel1">Project Overview</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Research Question</h6>
-        <p>What is the main research question?</p>
-        <h6>Findings</h6>
-        <p>What are the key findings?</p>
-        <h6>Results</h6>
-        <p>What are the results of the analysis?</p>
-        <!-- Add more sections as needed -->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Project 4</h5>
+                  <p class="card-text">A brief description of Project 4. Built using Flask and Bootstrap.</p>
+                  <div class="d-flex justify-content-between">
+                    <a href="#" class="btn btn-outline-primary btn-sm">Clone Project</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm">Repo</a>
+                  </div>
+                  <hr>
+                  <p class="mb-1"><strong>Languages:</strong> Python: 70%, HTML: 30%</p>
+                  <p class="mb-1"><strong>Updated:</strong> September 10, 2024</p>
+                </div>
+              </div>
+            </div>
             <!-- Project Card 5 -->
-<div class="col-md-4">
-  <div class="card project-card">
-    <img src="image1.png" class="card-img-top" alt="Project 5 Image">
-    <div class="card-body">
-      <h5 class="card-title">Project 5</h5>
-      <p class="card-text">A brief description of Project 5. Built using Bootstrap and JavaScript.</p>
-      <div class="d-flex justify-content-between">
-        <button class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#overviewModal1">Overview</button>
-        <a href="https://github.com/yourrepo/project1" class="btn btn-outline-secondary btn-sm">Repo</a>
-      </div>
-      <hr>
-      <p class="mb-1"><strong>Languages:</strong> JavaScript: 50%, SCSS: 30%, HTML: 20%</p>
-      <p class="mb-1"><strong>Updated:</strong> December 24, 2024</p>
-    </div>
-  </div>
-</div>
-
-<!-- Overview Modal -->
-<div class="modal fade" id="overviewModal1" tabindex="-1" role="dialog" aria-labelledby="overviewModalLabel1" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="overviewModalLabel1">Project Overview</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Research Question</h6>
-        <p>What is the main research question?</p>
-        <h6>Findings</h6>
-        <p>What are the key findings?</p>
-        <h6>Results</h6>
-        <p>What are the results of the analysis?</p>
-        <!-- Add more sections as needed -->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Project 5</h5>
+                  <p class="card-text">A brief description of Project 5. Built using Vue.js and Tailwind CSS.</p>
+                  <div class="d-flex justify-content-between">
+                    <a href="#" class="btn btn-outline-primary btn-sm">Clone Project</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm">Repo</a>
+                  </div>
+                  <hr>
+                  <p class="mb-1"><strong>Languages:</strong> JavaScript: 65%, CSS: 25%, HTML: 10%</p>
+                  <p class="mb-1"><strong>Updated:</strong> August 5, 2024</p>
+                </div>
+              </div>
+            </div>
             <!-- Project Card 6 -->
-<div class="col-md-4">
-  <div class="card project-card">
-    <img src="image1.png" class="card-img-top" alt="Project 6 Image">
-    <div class="card-body">
-      <h5 class="card-title">Project 6</h5>
-      <p class="card-text">A brief description of Project 6. Built using Bootstrap and JavaScript.</p>
-      <div class="d-flex justify-content-between">
-        <button class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#overviewModal1">Overview</button>
-        <a href="https://github.com/yourrepo/project1" class="btn btn-outline-secondary btn-sm">Repo</a>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Project 6</h5>
+                  <p class="card-text">A brief description of Project 6. Built using Angular and Bootstrap.</p>
+                  <div class="d-flex justify-content-between">
+                    <a href="#" class="btn btn-outline-primary btn-sm">Research Question</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm">Repo</a>
+                  </div>
+                  <hr>
+                  <p class="mb-1"><strong>Languages:</strong> JavaScript: 70%, SCSS: 20%, HTML: 10%</p>
+                  <p class="mb-1"><strong>Updated:</strong> July 15, 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <hr>
-      <p class="mb-1"><strong>Languages:</strong> JavaScript: 50%, SCSS: 30%, HTML: 20%</p>
-      <p class="mb-1"><strong>Updated:</strong> December 24, 2024</p>
-    </div>
-  </div>
-</div>
-
-<!-- Overview Modal -->
-<div class="modal fade" id="overviewModal1" tabindex="-1" role="dialog" aria-labelledby="overviewModalLabel1" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="overviewModalLabel1">Project Overview</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Research Question</h6>
-        <p>What is the main research question?</p>
-        <h6>Findings</h6>
-        <p>What are the key findings?</p>
-        <h6>Results</h6>
-        <p>What are the results of the analysis?</p>
-        <!-- Add more sections as needed -->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
       
       <!-- Carousel Controls -->
-<a class="carousel-control-prev text-dark" href="#projectCarousel" role="button" data-slide="prev" style="font-size: 2rem; left: -130px;">
+<a class="carousel-control-prev text-dark" href="#projectCarousel" role="button" data-slide="prev" style="font-size: 2rem; left: -160px;">
     <span class="carousel-control-prev-icon bg-dark p-2 rounded-circle" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
 </a>
-<a class="carousel-control-next text-dark" href="#projectCarousel" role="button" data-slide="next" style="font-size: 2rem; right: -130px;">
+<a class="carousel-control-next text-dark" href="#projectCarousel" role="button" data-slide="next" style="font-size: 2rem; right: -160px;">
     <span class="carousel-control-next-icon bg-dark p-2 rounded-circle" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
 </a>
