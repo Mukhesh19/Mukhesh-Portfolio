@@ -236,7 +236,7 @@
         <!-- First Set of 3 Cards -->
         <div class="carousel-item active">
           <div class="row">
-            <!-- Project Card 1 -->
+           <!-- Project Card 1 -->
 <div class="col-md-4">
   <div class="card project-card">
     <img src="image1.png" class="card-img-top" alt="Project 1 Image">
@@ -244,7 +244,7 @@
       <h5 class="card-title">Project 1</h5>
       <p class="card-text">A brief description of Project 1. Built using Bootstrap and JavaScript.</p>
       <div class="d-flex justify-content-between">
-        <button class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#cloneProjectModal1">Clone Project</button>
+        <button class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#overviewModal1">Overview</button>
         <a href="https://github.com/yourrepo/project1" class="btn btn-outline-secondary btn-sm">Repo</a>
       </div>
       <hr>
@@ -254,27 +254,27 @@
   </div>
 </div>
 
-<!-- Clone Project Modal -->
-<div class="modal fade" id="cloneProjectModal1" tabindex="-1" role="dialog" aria-labelledby="cloneProjectModalLabel1" aria-hidden="true">
+<!-- Overview Modal -->
+<div class="modal fade" id="overviewModal1" tabindex="-1" role="dialog" aria-labelledby="overviewModalLabel1" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="cloneProjectModalLabel1">Clone Project</h5>
+        <h5 class="modal-title" id="overviewModalLabel1">Project Overview</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
+        <h6>Research Question</h6>
+        <p>What is the main research question?</p>
+        <h6>Findings</h6>
+        <p>What are the key findings?</p>
+        <h6>Results</h6>
+        <p>What are the results of the analysis?</p>
+        <!-- Add more sections as needed -->
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
       </div>
     </div>
   </div>
