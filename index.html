@@ -455,7 +455,54 @@
   border-radius: 5px; /* Adjust the value as needed for rounded corners */
   margin-right: 10px;
 }
+
+.certification-card {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.certification-card:hover {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
 </style>
+
+  <!-- Certifications Section -->
+<section id="certifications" class="certifications-section py-5" style="background-color: #f9f9f9;">
+  <div class="container">
+    <h2 class="text-center mb-4">Certifications & Courses</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card certification-card">
+          <img src="path/to/certification1.png" class="card-img-top" alt="Certification 1">
+          <div class="card-body">
+            <h5 class="card-title">Certification 1</h5>
+            <p class="card-text">Description of Certification 1.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card certification-card">
+          <img src="path/to/certification2.png" class="card-img-top" alt="Certification 2">
+          <div class="card-body">
+            <h5 class="card-title">Certification 2</h5>
+            <p class="card-text">Description of Certification 2.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card certification-card">
+          <img src="path/to/certification3.png" class="card-img-top" alt="Certification 3">
+          <div class="card-body">
+            <h5 class="card-title">Certification 3</h5>
+            <p class="card-text">Description of Certification 3.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
 
 <!-- Include Bootstrap JavaScript -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
