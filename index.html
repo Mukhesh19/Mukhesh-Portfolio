@@ -390,64 +390,198 @@
 
   <!-- Skills Section -->
 <!-- Skills Section -->
-<section id="skills" class="skills-section py-5" style="background-color: #e6e6e6;">
-  <div class="container">
-    <h2 class="text-center mb-4">Skills</h2>
-    <ul class="nav nav-tabs nav-justified" id="skillsTab" role="tablist">
-      <li class="nav-item">
-        <a class="nav-link active" id="technical-skills-tab" data-toggle="tab" href="#technical-skills" role="tab" aria-controls="technical-skills" aria-selected="true">Technical Skills</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="soft-skills-tab" data-toggle="tab" href="#soft-skills" role="tab" aria-controls="soft-skills" aria-selected="false">Soft Skills</a>
-      </li>
-    </ul>
-    <div class="tab-content" id="skillsTabContent">
-      <div class="tab-pane fade show active" id="technical-skills" role="tabpanel" aria-labelledby="technical-skills-tab">
-        <div class="row mt-4">
-          <div class="col-md-4">
-            <div class="skills-box">
-              <img src="icons/python.png" alt="Python" class="img-fluid skill-logo">
-              <p>Python</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="skills-box">
-              <img src="icons/r.png" alt="R" class="img-fluid skill-logo">
-              <p>R</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="skills-box">
-              <img src="icons/sql.png" alt="SQL" class="img-fluid skill-logo">
-              <p>SQL</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="skills-box">
-              <img src="icons/java.png" alt="Java" class="img-fluid skill-logo">
-              <p>Java</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="skills-box">
-              <img src="icons/cpp.png" alt="C++" class="img-fluid skill-logo">
-              <p>C++</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="soft-skills" role="tabpanel" aria-labelledby="soft-skills-tab">
-        <div class="mt-4">
-          <p>Communication</p>
-          <p>Teamwork</p>
-          <p>Problem-Solving</p>
-          <p>Time Management</p>
-          <p>Adaptability</p>
-        </div>
-      </div>
+</head>
+<body>
+    <div class="tabs">
+        <div class="tab active" onclick="openTab(event, 'technical-skills')">Technical Skills</div>
+        <div class="tab" onclick="openTab(event, 'soft-skills')">Soft Skills</div>
     </div>
-  </div>
-</section>
+
+    <div id="technical-skills" class="tab-content active">
+        <div class="skills-section">
+            <div class="skill-category">Programming Language</div>
+            <div class="divider"></div>
+            <div class="skill-icons">
+                <div class="icon-container">
+                    <div class="icon-frame">
+                        <div class="front">
+                            <img src="images/python.png" alt="Python" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="back">Python</div>
+                    </div>
+                </div>
+                <div class="icon-container">
+                    <div class="icon-frame">
+                        <div class="front">
+                            <img src="images/r.png" alt="R" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="back">R</div>
+                    </div>
+                </div>
+                <div class="icon-container">
+                    <div class="icon-frame">
+                        <div class="front">
+                            <img src="images/sql.png" alt="SQL" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="back">SQL</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-section">
+            <div class="skill-category">Visualization Tools</div>
+            <div class="divider"></div>
+            <div class="skill-icons">
+                <div class="icon-container">
+                    <div class="icon-frame">
+                        <div class="front">
+                            <img src="images/python.png" alt="Python" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="back">Python</div>
+                    </div>
+                </div>
+                <div class="icon-container">
+                    <div class="icon-frame">
+                        <div class="front">
+                            <img src="images/r.png" alt="R" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="back">R</div>
+                    </div>
+                </div>
+                <div class="icon-container">
+                    <div class="icon-frame">
+                        <div class="front">
+                            <img src="images/sql.png" alt="SQL" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="back">SQL</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="soft-skills" class="tab-content">
+        <p>Soft Skills content goes here. You can add lists, paragraphs, or other formats to describe your soft skills.</p>
+    </div>
+</body>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .tabs {
+            display: flex;
+            cursor: pointer;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px 5px 0 0;
+            background-color: #f9f9f9;
+            margin-right: 5px;
+        }
+
+        .tab.active {
+            background-color: #fff;
+            border-bottom: none;
+        }
+
+        .tab-content {
+            display: none;
+            border: 1px solid #ddd;
+            border-top: none;
+            padding: 20px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .skills-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .skill-category {
+            width: 30%;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .divider {
+            border-left: 2px solid #ddd;
+            height: 100%;
+        }
+
+        .skill-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .icon-container {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            perspective: 1000px;
+        }
+
+        .icon-frame {
+            width: 100%;
+            height: 100%;
+            border: 2px solid green;
+            border-radius: 5px;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .icon-frame:hover {
+            transform: rotateY(180deg);
+        }
+
+        .icon-frame .front, .icon-frame .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon-frame .front {
+            background: white;
+        }
+
+        .icon-frame .back {
+            background: #f4f4f4;
+            transform: rotateY(180deg);
+            font-size: 12px;
+            color: black;
+        }
+    </style>
+    <script>
+        function openTab(event, tabName) {
+            // Hide all tab content
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Show the selected tab content and mark the tab as active
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
   
 <style>
 .skills-box img.skill-logo {
