@@ -172,13 +172,7 @@
   .project-card:hover {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   }
-  .skills-box img {
-  height: 40px;
-  width: 40px;
-  border-radius: 5px; /* Adjust the value as needed for rounded corners */
-  margin-right: 10px;
-}
-  </style>
+    </style>
 </head>
 <body>
   <!-- Navigation Bar -->
@@ -389,9 +383,10 @@
 </section>
 
   <!-- Skills Section -->
-<!-- Skills Section -->
-</head>
+ <title>Skills Section</title></head>
 <body>
+    <div class="section-title">Skills</div>
+
     <div class="tabs">
         <div class="tab active" onclick="openTab(event, 'technical-skills')">Technical Skills</div>
         <div class="tab" onclick="openTab(event, 'soft-skills')">Soft Skills</div>
@@ -465,10 +460,14 @@
         <p>Soft Skills content goes here. You can add lists, paragraphs, or other formats to describe your soft skills.</p>
     </div>
 </body>
+</html>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 20px 0;
         }
 
         .tabs {
@@ -507,23 +506,27 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
+            width: 100%;
         }
 
         .skill-category {
-            width: 30%;
+            width: 20%;
             font-size: 18px;
             font-weight: bold;
+            text-align: center;
         }
 
         .divider {
             border-left: 2px solid #ddd;
-            height: 100%;
+            height: auto;
+            margin: 0 20px;
         }
 
         .skill-icons {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 15px;
+            width: 70%;
         }
 
         .icon-container {
@@ -584,12 +587,6 @@
     </script>
   
 <style>
-.skills-box img.skill-logo {
-  height: 40px;
-  width: 40px;
-  border-radius: 5px; /* Adjust the value as needed for rounded corners */
-  margin-right: 10px;
-}
 
 .certification-card {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
