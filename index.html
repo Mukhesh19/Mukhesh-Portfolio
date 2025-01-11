@@ -713,122 +713,51 @@
   
 <style>
 
-<style>
-  .carousel-card {
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-  }
+.certification-card {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
 
-  .carousel-card:hover {
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  }
-
-  .carousel-inner {
-    display: flex;
-    justify-content: center;
-  }
-
-  .carousel-item {
-    display: flex;
-    justify-content: center;
-  }
-
-  .carousel-card {
-    width: 200px;
-    margin: 0 10px;
-  }
-
-  .carousel-control-prev, .carousel-control-next {
-    width: 5%;
-    z-index: 10;
-  }
-
-  .carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: black;
-  }
-
-  .carousel-control-prev, .carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .carousel-control-prev {
-    left: 0;
-  }
-
-  .carousel-control-next {
-    right: 0;
-  }
+.certification-card:hover {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
 </style>
 
-<!-- Certifications Carousel Section -->
+  <!-- Certifications Section -->
 <section id="certifications" class="certifications-section py-5" style="background-color: #f9f9f9;">
   <div class="container">
     <h2 class="text-center mb-4">Certifications & Courses</h2>
-    <div id="certificationsCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <!-- First Slide -->
-        <div class="carousel-item active">
-          <div class="row justify-content-center">
-            <!-- Card 1 -->
-            <div class="col-md-3">
-              <div class="card carousel-card">
-                <img src="path/to/certification1.png" class="card-img-top" alt="Certification 1">
-                <div class="card-body">
-                  <h5 class="card-title">Certification 1</h5>
-                  <p class="card-text">Description of Certification 1.</p>
-                </div>
-              </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="col-md-3">
-              <div class="card carousel-card">
-                <img src="path/to/certification2.png" class="card-img-top" alt="Certification 2">
-                <div class="card-body">
-                  <h5 class="card-title">Certification 2</h5>
-                  <p class="card-text">Description of Certification 2.</p>
-                </div>
-              </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="col-md-3">
-              <div class="card carousel-card">
-                <img src="path/to/certification3.png" class="card-img-top" alt="Certification 3">
-                <div class="card-body">
-                  <h5 class="card-title">Certification 3</h5>
-                  <p class="card-text">Description of Certification 3.</p>
-                </div>
-              </div>
-            </div>
-            <!-- Card 4 -->
-            <div class="col-md-3">
-              <div class="card carousel-card">
-                <img src="path/to/certification4.png" class="card-img-top" alt="Certification 4">
-                <div class="card-body">
-                  <h5 class="card-title">Certification 4</h5>
-                  <p class="card-text">Description of Certification 4.</p>
-                </div>
-              </div>
-            </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card certification-card">
+          <img src="path/to/certification1.png" class="card-img-top" alt="Certification 1">
+          <div class="card-body">
+            <h5 class="card-title">Certification 1</h5>
+            <p class="card-text">Description of Certification 1.</p>
           </div>
         </div>
       </div>
-
-      <!-- Carousel Controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#certificationsCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#certificationsCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <div class="col-md-4">
+        <div class="card certification-card">
+          <img src="path/to/certification2.png" class="card-img-top" alt="Certification 2">
+          <div class="card-body">
+            <h5 class="card-title">Certification 2</h5>
+            <p class="card-text">Description of Certification 2.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card certification-card">
+          <img src="path/to/certification3.png" class="card-img-top" alt="Certification 3">
+          <div class="card-body">
+            <h5 class="card-title">Certification 3</h5>
+            <p class="card-text">Description of Certification 3.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
-
 
   
 
