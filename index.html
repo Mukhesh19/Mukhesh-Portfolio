@@ -537,21 +537,21 @@
         </div>
     </div>
 
-    <div id="soft-skills" class="tab-content">
+   <div id="soft-skills" class="tab-content">
     <div class="word-cloud">
-        <span class="word" onmouseover="showTooltip(event, 'Ability to analyze and evaluate data effectively.')" onmouseout="hideTooltip()">Critical Thinking</span>
-        <span class="word" onmouseover="showTooltip(event, 'Conveying insights through compelling narratives.')" onmouseout="hideTooltip()">Data Storytelling</span>
-        <span class="word" onmouseover="showTooltip(event, 'Maintaining precision and accuracy in all tasks.')" onmouseout="hideTooltip()">Attention to Detail</span>
-        <span class="word" onmouseover="showTooltip(event, 'Clear and effective exchange of ideas.')" onmouseout="hideTooltip()">Communication</span>
-        <span class="word" onmouseover="showTooltip(event, 'Approaching challenges with logical solutions.')" onmouseout="hideTooltip()">Problem-Solving</span>
-        <span class="word" onmouseover="showTooltip(event, 'Collaborating efficiently within diverse teams.')" onmouseout="hideTooltip()">Teamwork</span>
-        <span class="word" onmouseover="showTooltip(event, 'Providing detailed, actionable insights in reports.')" onmouseout="hideTooltip()">Thorough Reporting</span>
-        <span class="word" onmouseover="showTooltip(event, 'Prioritizing and managing time effectively.')" onmouseout="hideTooltip()">Time Management</span>
-        <span class="word" onmouseover="showTooltip(event, 'Flexibility to handle changing demands.')" onmouseout="hideTooltip()">Adaptability</span>
-        <span class="word" onmouseover="showTooltip(event, 'Inspiring and guiding teams to success.')" onmouseout="hideTooltip()">Leadership</span>
-        <span class="word" onmouseover="showTooltip(event, 'Organizing tasks and maintaining systematic processes.')" onmouseout="hideTooltip()">Organization & Version Control</span>
+        <span class="word" onclick="showDescription('Ability to analyze and evaluate data effectively.')">Critical Thinking</span>
+        <span class="word" onclick="showDescription('Conveying insights through compelling narratives.')">Data Storytelling</span>
+        <span class="word" onclick="showDescription('Maintaining precision and accuracy in all tasks.')">Attention to Detail</span>
+        <span class="word" onclick="showDescription('Clear and effective exchange of ideas.')">Communication</span>
+        <span class="word" onclick="showDescription('Approaching challenges with logical solutions.')">Problem-Solving</span>
+        <span class="word" onclick="showDescription('Collaborating efficiently within diverse teams.')">Teamwork</span>
+        <span class="word" onclick="showDescription('Providing detailed, actionable insights in reports.')">Thorough Reporting</span>
+        <span class="word" onclick="showDescription('Prioritizing and managing time effectively.')">Time Management</span>
+        <span class="word" onclick="showDescription('Flexibility to handle changing demands.')">Adaptability</span>
+        <span class="word" onclick="showDescription('Inspiring and guiding teams to success.')">Leadership</span>
+        <span class="word" onclick="showDescription('Organizing tasks and maintaining systematic processes.')">Organization & Version Control</span>
     </div>
-    <div id="tooltip" class="tooltip"></div>
+    <div id="description-box" style="text-align: center; margin-top: 20px; font-size: 18px; font-weight: bold;"></div>
 </div>
   
 <style>
@@ -704,6 +704,11 @@
             event.currentTarget.classList.add('active');
             document.getElementById(tabId).classList.add('active');
         }
+      function showDescription(skillDescription) {
+           const descriptionBox = document.getElementById('description-box');
+           descriptionBox.textContent = skillDescription;
+    }
+
     </script>
   
 <style>
