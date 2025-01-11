@@ -538,10 +538,21 @@
     </div>
 
     <div id="soft-skills" class="tab-content">
-        <p>Soft Skills content goes here. You can add lists, paragraphs, or other formats to describe your soft skills.</p>
+    <div class="word-cloud">
+        <span class="word" onmouseover="showTooltip(event, 'Ability to analyze and evaluate data effectively.')" onmouseout="hideTooltip()">Critical Thinking</span>
+        <span class="word" onmouseover="showTooltip(event, 'Conveying insights through compelling narratives.')" onmouseout="hideTooltip()">Data Storytelling</span>
+        <span class="word" onmouseover="showTooltip(event, 'Maintaining precision and accuracy in all tasks.')" onmouseout="hideTooltip()">Attention to Detail</span>
+        <span class="word" onmouseover="showTooltip(event, 'Clear and effective exchange of ideas.')" onmouseout="hideTooltip()">Communication</span>
+        <span class="word" onmouseover="showTooltip(event, 'Approaching challenges with logical solutions.')" onmouseout="hideTooltip()">Problem-Solving</span>
+        <span class="word" onmouseover="showTooltip(event, 'Collaborating efficiently within diverse teams.')" onmouseout="hideTooltip()">Teamwork</span>
+        <span class="word" onmouseover="showTooltip(event, 'Providing detailed, actionable insights in reports.')" onmouseout="hideTooltip()">Thorough Reporting</span>
+        <span class="word" onmouseover="showTooltip(event, 'Prioritizing and managing time effectively.')" onmouseout="hideTooltip()">Time Management</span>
+        <span class="word" onmouseover="showTooltip(event, 'Flexibility to handle changing demands.')" onmouseout="hideTooltip()">Adaptability</span>
+        <span class="word" onmouseover="showTooltip(event, 'Inspiring and guiding teams to success.')" onmouseout="hideTooltip()">Leadership</span>
+        <span class="word" onmouseover="showTooltip(event, 'Organizing tasks and maintaining systematic processes.')" onmouseout="hideTooltip()">Organization & Version Control</span>
     </div>
-</body>
-</body>
+    <div id="tooltip" class="tooltip"></div>
+</div>
   
 <style>
         body {
@@ -649,6 +660,38 @@
             color: white;
             transform: rotateY(180deg);
         }
+  .word-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.word {
+    font-size: 18px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.word:hover {
+    transform: scale(1.2);
+    background-color: #007BFF;
+    color: white;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 14px;
+    z-index: 10;
+}
     </style>
     <script>
         function openTab(event, tabId) {
