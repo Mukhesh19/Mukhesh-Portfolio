@@ -713,21 +713,38 @@
   
 <style>
 
-.certification-card {
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-}
+<style>
+  .certification-card {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
 
-.certification-card:hover {
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-}
+  .certification-card:hover {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .link-card {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    background-color: #f0f0f0;
+  }
+
+  .link-card:hover {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+
+  .link-card .card-body {
+    text-align: center;
+  }
 </style>
 
-  <!-- Certifications Section -->
+<!-- Certifications Section -->
 <section id="certifications" class="certifications-section py-5" style="background-color: #f9f9f9;">
   <div class="container">
     <h2 class="text-center mb-4">Certifications & Courses</h2>
     <div class="row">
+      <!-- Display your 9 certificates here -->
       <div class="col-md-4">
         <div class="card certification-card">
           <img src="path/to/certification1.png" class="card-img-top" alt="Certification 1">
@@ -757,6 +774,30 @@
       </div>
     </div>
   </div>
+  <div class="col-md-4">
+        <div class="card certification-card">
+          <img src="path/to/certification1.png" class="card-img-top" alt="Certification 1">
+          <div class="card-body">
+            <h5 class="card-title">Certification 1</h5>
+            <p class="card-text">Description of Certification 1.</p>
+          </div>
+        </div>
+      </div>
+  
+<!-- Link Card to GitHub Study Courses -->
+      <div class="col-md-4">
+        <a href="https://github.com/your-username/your-repository-folder" target="_blank">
+          <div class="card link-card">
+            <div class="card-body">
+              <h5 class="card-title">View Study Courses</h5>
+              <p class="card-text">Click here to view all my certified study courses listed on my GitHub repository.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 </section>
 
   
