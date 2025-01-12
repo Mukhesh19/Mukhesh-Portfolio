@@ -6,51 +6,13 @@
   <title>Data Analyst Portfolio</title>
   <!-- Include Bootstrap -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-    /* General Styles */
+  <style>
+    /* Gradient Background */
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
     }
 
-    h1, h2, h3, h4, h5, h6 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-    }
-
-    /* Navigation Bar */
-    .navbar {
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 0.7rem 1rem;
-    }
-
-    .navbar a {
-      color: white;
-      text-transform: uppercase;
-      font-size: 1rem;
-      margin-right: 20px;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .navbar a:hover {
-      color: #1ad7c0;
-    }
-
-    .navbar-brand {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #ff9b11;
-    }
-
-    /* Hero Section */
     .hero-section {
       height: 100vh;
       display: flex;
@@ -62,6 +24,8 @@
       animation: gradientBG 8s infinite;
       color: white;
       text-align: center;
+      overflow: hidden;
+      position: relative;
     }
 
     @keyframes gradientBG {
@@ -70,30 +34,128 @@
       100% { background-position: 0% 50%; }
     }
 
-    .hero-title {
-      font-size: 4rem;
+    /* Floating Bubbles */
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: floatUp 12s linear infinite;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(-10%);
+        opacity: 1;
+      }
+    }
+
+    /* Generate Random Bubbles */
+    .bubble:nth-child(1) { width: 15px; height: 15px; left: 10%; animation-duration: 14s; }
+    .bubble:nth-child(2) { width: 10px; height: 10px; left: 20%; animation-duration: 10s; }
+    .bubble:nth-child(3) { width: 8px; height: 8px; left: 30%; animation-duration: 12s; }
+    .bubble:nth-child(4) { width: 12px; height: 12px; left: 40%; animation-duration: 15s; }
+    .bubble:nth-child(5) { width: 9px; height: 9px; left: 50%; animation-duration: 11s; }
+    .bubble:nth-child(6) { width: 7px; height: 7px; left: 60%; animation-duration: 9s; }
+    .bubble:nth-child(7) { width: 6px; height: 6px; left: 70%; animation-duration: 13s; }
+    .bubble:nth-child(8) { width: 5px; height: 5px; left: 80%; animation-duration: 8s; }
+
+    /* Navigation Bar */
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 0.7rem 1rem;
+    }
+
+    .navbar a {
+      color: white;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      margin-right: 20px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #1ad7c0;
+    }
+
+    .navbar-brand {
+      font-size: 1.2rem;
       font-weight: bold;
+      color: #ff9b11;
+    }
+
+    /* Hero Content */
+    .hero-title {
+      font-size: 5rem;
+      font-weight: normal;
       margin: 0 0 20px;
     }
 
     .hero-tagline {
       font-size: 1.8rem;
       margin: 20px 0 40px;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      animation: typewriter 3s steps(30) forwards;
     }
 
-    /* Section Titles */
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: bold;
-      text-align: center;
-      margin: 40px 0 20px;
+    @keyframes typewriter {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
     }
 
-    /* About Section */
+    /* Social Media Icons */
+    .social-icons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+    }
+
+    /* About Section Styling */
     .about-section {
       padding: 80px 20px;
       background-color: #f9f9f9;
       color: #333;
+      text-align: center;
+    }
+
+    .about-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
     }
 
     .about-text {
@@ -101,65 +163,16 @@
       line-height: 1.8;
       max-width: 800px;
       margin: 0 auto;
-      text-align: center;
     }
+   .project-card {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
 
-    /* Project Cards */
-    .project-card {
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-      transition: box-shadow 0.3s ease;
-    }
-
-    .project-card:hover {
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Skills Section */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 20px;
-      padding: 20px;
-    }
-
-    .skill-category {
-      text-align: center;
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-
-    /* Certifications Section */
-    .certification-card {
-      height: 300px;
-      width: 90%;
-      margin: 0 auto;
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-      transition: box-shadow 0.3s ease;
-    }
-
-    .certification-card:hover {
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Footer */
-    footer {
-      background: linear-gradient(90deg, #333, #444);
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    footer a {
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    footer a:hover {
-      color: #1ad7c0;
-    }
-  </style>
+  .project-card:hover {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  }
+    </style>
 </head>
 <body>
   <!-- Navigation Bar -->
@@ -543,6 +556,19 @@
 </div>
   
 <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
         .tabs {
             display: flex;
             justify-content: center;
