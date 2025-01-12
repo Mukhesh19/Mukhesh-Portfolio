@@ -895,121 +895,142 @@ Beyond his technical capabilities, Mukhesh's ability to inspire others and foste
 
 </section>
 
-<!-- Get in Touch Section -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-<section id="get-in-touch" class="py-5" style="background-color: #e8f5f8;">
-  <div class="container">
-    <h2 class="text-center mb-4" style="font-weight: bold;">Get in Touch</h2>
-    <div class="row justify-content-between align-items-center">
-      <!-- Contact Form -->
-      <div class="col-md-6">
-        <form>
-          <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control rounded-3" id="name" placeholder="Your Name">
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control rounded-3" id="email" placeholder="Your Email">
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Your Message</label>
-            <textarea class="form-control rounded-3" id="message" rows="4" placeholder="Type your message here..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary rounded-pill px-4">Send Message</button>
-        </form>
-      </div>
+<title>Contact Me</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* General Section Styling */
+    #get-in-touch {
+      background-color: #e8f5f8;
+      padding: 60px 0;
+    }
 
-      <!-- Contact Info -->
-      <div class="col-md-5">
-        <!-- Introductory Paragraph -->
-        <p class="mb-4" style="font-size: 16px; color: #333;">
-          I'm currently looking for full-time Data Analysis, Data Science, or Machine Learning opportunities! 
-          If you know of any positions available, if you have any questions, or if you just want to say hi, 
-          please feel free to reach out to me.
-        </p>
+    #get-in-touch h2 {
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-        <!-- Social Media Links -->
-        <ul class="list-unstyled d-flex justify-content-center justify-content-md-start">
-          <li class="me-3">
-            <a href="mailto:example@gmail.com" class="social-icon">
-              <i class="fas fa-envelope"></i>
-            </a>
-          </li>
-          <li class="me-3">
-            <a href="https://github.com/example" target="_blank" class="social-icon">
-              <i class="fab fa-github"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://linkedin.com/in/example" target="_blank" class="social-icon">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </li>
-        </ul>
+    #get-in-touch .form-control {
+      border: 1px solid #ccc;
+      padding: 12px 20px;
+      border-radius: 8px; /* Rounded corners for input fields */
+    }
+
+    #get-in-touch .btn-primary {
+      background-color: #007bff;
+      border: none;
+      transition: background-color 0.3s ease;
+      border-radius: 20px; /* Rounded button */
+      padding: 10px 25px;
+    }
+
+    #get-in-touch .btn-primary:hover {
+      background-color: #0056b3;
+    }
+
+    /* Social Media Styling */
+    .social-icon {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #000; /* Black background */
+      color: #fff; /* White icon */
+      font-size: 20px;
+      text-align: center;
+      line-height: 50px; /* Center align the icon vertically */
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.1);
+      background-color: #333; /* Darker black on hover */
+    }
+
+    .social-icon i {
+      vertical-align: middle;
+    }
+
+    /* Introductory Paragraph Styling */
+    #get-in-touch p {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 30px;
+      text-align: justify;
+    }
+
+    /* Social Media Container */
+    #get-in-touch ul {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    #get-in-touch ul li {
+      display: inline;
+    }
+  </style>
+</head>
+<body>
+  <section id="get-in-touch">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <div class="row" style="display: flex; justify-content: space-between; align-items: center;">
+        <!-- Contact Form -->
+        <div class="col-md-6" style="flex: 1; margin-right: 20px;">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your Name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Your Email">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Type your message here..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-md-5" style="flex: 1;">
+          <!-- Introductory Paragraph -->
+          <p>
+            I'm currently looking for full-time Data Analysis, Data Science, or Machine Learning opportunities! 
+            If you know of any positions available, if you have any questions, or if you just want to say hi, 
+            please feel free to reach out to me.
+          </p>
+
+          <!-- Social Media Links -->
+          <ul>
+            <li>
+              <a href="mailto:example@gmail.com" class="social-icon" title="Email Me">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/yourgithub" class="social-icon" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/yourlinkedin" class="social-icon" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-</style>
- /* General Section Styling */
-#get-in-touch {
-  background-color: #e8f5f8;
-  padding: 60px 0;
-}
-
-#get-in-touch h2 {
-  font-weight: bold;
-  color: #333;
-}
-
-#get-in-touch .form-control {
-  border: 1px solid #ccc;
-  padding: 12px 20px;
-  border-radius: 8px; /* Rounded corners for input fields */
-}
-
-#get-in-touch .btn-primary {
-  background-color: #007bff;
-  border: none;
-  transition: background-color 0.3s ease;
-}
-
-#get-in-touch .btn-primary:hover {
-  background-color: #0056b3;
-}
-
-/* Social Media Styling */
-.social-icon {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #000;
-  color: #fff;
-  font-size: 20px;
-  text-align: center;
-  line-height: 50px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.social-icon:hover {
-  transform: scale(1.1);
-  background-color: #333;
-}
-
-.social-icon i {
-  vertical-align: middle;
-}
-
-/* Introductory Paragraph Styling */
-#get-in-touch p {
-  font-size: 16px;
-  color: #333;
-}
-
- </style>
+  </section>
+</body>
+</html>
 
 <!-- Include Bootstrap JavaScript -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
