@@ -798,12 +798,28 @@
   margin: 0 auto; /* Center the cards */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .certification-card:hover {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .certification-card:hover .card-img-overlay {
+    opacity: 1;
+  }
+  
 /* Adjust the carousel controls (arrows) */
 .carousel-control-prev, .carousel-control-next {
   width: 50px; /* Increase clickable area */
@@ -850,13 +866,16 @@
         <div class="carousel-item active">
           <div class="row">
             <div class="col-md-3">
-              <div class="card certification-card" data-bs-toggle="modal" data-bs-target="#certificationModal" data-bs-image="certification1.png">
-                <img src="certification1.png" class="card-img-top" alt="Certification 1">
-                <div class="card-body">
-                  <h5 class="card-title">Certification 1</h5>
-                  <p class="card-text">Description of Certification 1.</p>
-                </div>
-              </div>
+             <div class="card certification-card" data-bs-toggle="modal" data-bs-target="#certificationModal" data-bs-image="certification1.png">
+  <div class="card-img-overlay d-flex justify-content-center align-items-center">
+    <i class="bi bi-search" style="font-size: 2rem; color: white;"></i>
+  </div>
+  <img src="certification1.png" class="card-img-top" alt="Certification 1">
+  <div class="card-body">
+    <h5 class="card-title">Certification 1</h5>
+    <p class="card-text">Description of Certification 1.</p>
+  </div>
+</div>
             </div>
             <div class="col-md-3">
               <div class="card certification-card" data-bs-toggle="modal" data-bs-target="#certificationModal" data-bs-image="certification1.png">
