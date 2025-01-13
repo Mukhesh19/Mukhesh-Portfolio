@@ -829,6 +829,17 @@
 }
 </style>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var certificationModal = document.getElementById('certificationModal');
+    certificationModal.addEventListener('show.bs.modal', function (event) {
+      var button = event.relatedTarget;
+      var imageSrc = button.getAttribute('data-bs-image');
+      var modalImage = certificationModal.querySelector('#modalImage');
+      modalImage.src = imageSrc;
+    });
+  });
+</script>
 
 <!-- Certifications Section -->
 <section id="certifications" class="certifications-section py-5" style="background-color: #f9f9f9;">
@@ -839,8 +850,8 @@
         <div class="carousel-item active">
           <div class="row">
             <div class="col-md-3">
-              <div class="card certification-card">
-                <img src="path/to/certification1.png" class="card-img-top" alt="Certification 1">
+              <div class="card certification-card" data-bs-toggle="modal" data-bs-target="#certificationModal" data-bs-image="certification1.png">
+                <img src="certification1.png" class="card-img-top" alt="Certification 1">
                 <div class="card-body">
                   <h5 class="card-title">Certification 1</h5>
                   <p class="card-text">Description of Certification 1.</p>
@@ -848,7 +859,7 @@
               </div>
             </div>
             <div class="col-md-3">
-              <div class="card certification-card">
+              <div class="card certification-card" data-bs-toggle="modal" data-bs-target="#certificationModal" data-bs-image="certification1.png">
                 <img src="certification2.png" class="card-img-top" alt="Certification 2">
                 <div class="card-body">
                   <h5 class="card-title">Certification 2</h5>
@@ -940,7 +951,7 @@
         </div>
       </div>
 
-      <!-- Carousel Controls -->
+       <!-- Carousel Controls -->
       <button class="carousel-control-prev" type="button" data-bs-target="#certificationsCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -952,6 +963,21 @@
     </div>
   </div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="certificationModal" tabindex="-1" aria-labelledby="certificationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="certificationModalLabel">Certification</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img id="modalImage" src="" class="img-fluid" alt="Certification">
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Testimonial Section -->
 <section id="recommendations" class="py-5" style="background-color: #ffffff;">
